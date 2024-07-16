@@ -84,7 +84,7 @@ function startScanner() {
 }
 
 function redirectToGitHub() {
-    window.location.href = 'https://github.com/devellight/portfolio-Website/minihackathon/';
+    window.location.href = 'https://github.com/DevelLight/portfolio-Website/tree/main/minihackathon';
 }
 
 startScanner();
