@@ -44,6 +44,7 @@ function fetchProductInfo(barcode) {
         .catch(error => {
             console.error('Error fetching product info:', error);
             document.getElementById('product-info').innerHTML = "Fehler beim Abrufen der Produktinformationen.";
+            document.getElementById('ingredients').style.display = "none";
         })
         .finally(() => hideLoadingSpinner());
 }
