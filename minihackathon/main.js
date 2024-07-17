@@ -63,7 +63,7 @@ function displayProductInfo(product) {
     const productInfoDiv = document.getElementById('product-info');
     const productInfoNr = document.getElementById('product-info-nr')
     const vegan = product.ingredients_text.includes("vegan") || product.ingredients_analysis_tags.includes("en:vegan") || product.ingredients_text.includes("water") ||  product.ingredients_text.includes("egg") ||  product.ingredients_text.includes("annimal") || product.ingredients_text.includes("gelatin") || product.ingredients_text.includes("lard");
-    const mayNotBeVegetarian = product.ingredients_text.includes("gelatin") || product.ingredients_text.includes("vegetarian") || product.ingredients_text.includes("lard") || product.ingredients_text.includes("animails")
+    const vegetarian = product.ingredients_text.includes("vegetarian")
     const productImage = product.image_url || 'undraw.png';
     productInfoDiv.innerHTML = `
         <h2 class="text-xl font-bold">${product.product_name}</h2>
@@ -125,8 +125,8 @@ function displayProductInfo(product) {
                        <span class="${vegan ? 'text-green-500' : 'text-red-500'}">
                 ${vegan ? '✔️ Vegan' : '❌ Not Vegan' }
             </span>
-            <span class="${mayNotBeVegetarian ? 'text-red-500' : 'text-green-500'} ml-4">
-                ${mayNotBeVegetarian ? '❌ Not Vegetarian' : '✔️ Vegetarian'}
+            <span class="${vegetarian ?  'text-green-500' : 'text-red-500' } ml-4">
+                ${vegetarian ? '✔️ Vegetarian' : '❌ Not Vegetarian'}
             </span>
              </div>
     `;
