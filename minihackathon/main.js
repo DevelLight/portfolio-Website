@@ -62,7 +62,7 @@ function displayProductInfo(product) {
     document.getElementById('ingredients').style.display = "";
     const productInfoDiv = document.getElementById('product-info');
     const productInfoNr = document.getElementById('product-info-nr')
-    const vegan = product.ingredients_text.includes("vegan") || product.ingredients_text.includes("en:vegan") || product.ingredients_text.includes("egg") ||  product.ingredients_text.includes("animail") || product.ingredients_text.includes("gelatin") || product.ingredients_text.includes("lard");
+    const vegan = product.ingredients_text.includes("vegan") || product.ingredients_text.includes("en:vegan") || product.ingredients_text.includes("egg") || product.ingredients_text.includes("gelatin") || product.ingredients_text.includes("lard");
     const vegetarian = product.ingredients_text.includes("vegetarian")
     const productImage = product.image_url || 'undraw.png';
     productInfoDiv.innerHTML = `
