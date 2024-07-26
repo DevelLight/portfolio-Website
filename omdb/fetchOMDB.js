@@ -1,5 +1,3 @@
-const API_KEY = '33963bc8';
-
 async function fetchMovieData(imdbID) {
     const response = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=${API_KEY}`);
     return await response.json();
